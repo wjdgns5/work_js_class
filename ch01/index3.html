@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h2>index3.html</h2>
+
+        <script>
+            function example(){
+                if(true){
+                    var y = 20; // var은 블록 범위 밖이어도 작동
+                    let x = 10; // let은 블록범위 안에서만 작동 
+                    console.log(y);
+                    console.log(x);
+                }
+                console.log('---------');
+                console.log(y); // 작동 O
+                console.log(x); // 작동 X
+            }
+
+            example();
+
+        </script>
+
+
+</body>
+</html>

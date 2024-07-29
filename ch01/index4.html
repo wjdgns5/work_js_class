@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>index4.html 파일 입니다.</h1>
+    <script>
+
+        // 자바 스크립트에서 사용자 정의 객체와 생성자 함수 설계
+        function Person(firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName; 
+        }
+
+        // 객체 생성 
+        // 객체 생성 
+        const person1 = new Person("길동", "홍");
+        const person2 = new Person("순신", "이");
+
+        console.log(person1);
+        console.log(person2);
+
+        console.log("---------------------")
+        // 객체 리터럴 표기법 (사용자 정의 프로토타입 설계 및 생성)
+        const student = {
+            name: "John",
+            age: 30
+        };
+        // 객체 생성과 동시에 초기화가 되었다.
+        console.log(student.name);
+        console.log(student.age);
+
+    </script>        
+
+</body>
+</html>

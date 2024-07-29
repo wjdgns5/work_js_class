@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index8.html 파일 입니다.</title>
+</head>
+<body>
+    <h1>index8.html 파일 입니다.</h1>
+
+    <script>
+
+        // 1. 매개변수가 없는 함수 표현식을 정의해 보자.
+        // 매개변수 : - 함수를 실행하기 위해 필요하다고 지정하는 값
+        const currentTime = function() {
+            const now = new Date();
+            return now.toLocaleTimeString();
+        };
+
+        // 출력 결과를 잘 확인해 보자. 
+        console.log(currentTime); 
+        console.log(currentTime());
+
+        // 주의! 결과에 대한 분석을 통해 이해해 보자.
+        console.log(currentTime() );
+        console.log("------------");
+        const time = currentTime();
+
+        console.log(time);
+
+        // 2.
+        const add = function(x, y) {
+            return x + y;
+        }
+
+        function add2(x, y) {
+            return x + y;
+        }
+
+        console.log(add(3, 5));
+        console.log(add2(2, 2));
+
+        const result = add(10, 20);
+        console.log(result);
+
+    </script>
+
+</body>
+</html>

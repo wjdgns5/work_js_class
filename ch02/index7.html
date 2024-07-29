@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index7.html  버블링 </title>
+</head>
+<body>
+    <!-- 이벤트 전파 속성 - 버블링에 대한 개념  -->
+    <div id="parent">
+        <button id="child">Click me!</button>
+    </div>
+
+    <script>
+        document.getElementById("parent").addEventListener('click', ()=> {
+            alert("Parent Div Clicked! ");
+        })
+
+        window.document.getElementById('child').addEventListener('click', ()=> {
+            alert("Button Clicked!");
+        })
+
+
+
+
+    </script>
+    
+</body>
+</html>

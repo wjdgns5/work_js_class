@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>index5.html 파일 입니다.</h1>
+    <script>
+
+      // ES6 - 객체 리터럴 표기법
+    const person = {
+        firstName:'길동',
+        lastName:'홍',
+        age:30,
+        address: {  // 중첩 객체라고 한다.  객체 리터럴 표기법
+            street: '연수로 123번길',
+            city: '부산',
+            zip: '33123' 
+        },
+        hobbies:['독서', '등산', '요리', '코딩'], // 배열 
+        sayHello: function() {
+        //    alert("안녕"); // 잠시 주석
+        // 백틱 사용 -- // ES6 - 템플릿 리터럴 -> ${ }
+        console.log(`Hello, my name is ${this.firstName} ${this.lastName} 입니다.`);
+        }
+    };
+
+    person.sayHello();
+
+   // 객체를 바꾸면 오류가 나지만 객체 안의 상태값을 바꾸는 것은 오류가 나지 않는다.
+    person.firstName = '순신';
+    console.log(person.firstName);
+    console.log("---------------");
+
+    const name = '티모';
+    // name = '야스오'; // 잠시 주석
+    // console.log(name); // 잠시 주석
+
+    // 왜 위에는 되고 아래는 안되는 이유?
+    // 객체를 바꾸면 오류가 나지만 객체 안의 상태값을 바꾸는 것은 오류가 나지 않는다.
+
+
+    // 객체 속성에 접근하는 방법
+    console.log(person.firstName);
+    console.log(person.lastName);
+
+    // 중첩된 객체 속성에 접근하기
+    console.log(person.address.city);
+
+    // 배열 속성 - 0번 인덱스에 접근하기
+    console.log(person.hobbies[0]);
+
+    // 객체에 메서드 출력
+    console.log(person.sayHello());
+   
+    console.log("-----------------------"); 
+
+    // 해당하는 객체에 새로운 속성을 추가하고 싶다면??? 
+
+    // 객체에 속성 추가 
+    person.email = "a@nate.com";
+    console.log(person.email);
+
+    // 각 객체 상태값 변경
+    person.age = 100;
+    console.log(person.age);
+
+    // 메모리에 올라간 객체 속성을 삭제해 보자.
+    delete person.hobbies; // 취미에 있는 키,값 ,배열 을 삭제해 보자
+    console.log(person.hobbies);
+
+    </script>        
+
+</body>
+</html>

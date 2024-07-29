@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex--container {
+            display: flex;
+        }
+    </style>
+</head>
+        <h2>index12.html 파일 입니다.</h2>
+        <div class="flex--container">
+            <img src="/ch01/images/image1.png" alt="" id="toggleImage">
+            <button onclick="toggleImage()">이미지 토글</button>
+        </div>
+        <script>
+           
+            let isImage1 = true; 
+            function toggleImage() {
+                const imgElement = document.getElementById("toggleImage");
+                if(isImage1) {
+                    imgElement.src = "images/image2.png";
+                } else {
+                    imgElement.src = "images/image1.png";
+                }
+                isImage1 = !isImage1;
+            }
+
+            // function toggleImage2() {
+            //     let imageNode = document.getElementById("toggleImage");
+
+            //     if(imageNode.src.includes("image1.png")){
+            //         imageNode.src = "/ch01/images/image2.png";
+            //     } else {
+            //         imageNode.src = "/ch01/images/image1.png";
+            //     }
+
+            // }
+
+        </script>
+
+</body>
+</body>
+</html>

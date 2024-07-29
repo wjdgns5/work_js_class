@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index8.html  버블링 </title>
+</head>
+<body>
+    <!-- 이벤트 전파 중단하기  -->
+    <div id="parent">
+        <button id="child">Click me!</button>
+    </div>
+
+
+    <script>
+        document.getElementById("parent").addEventListener('click', ()=> {
+            alert("Parent Div Clicked! ");
+        });
+
+        // 버블링 중단하기 - 인수로 event 객체를 전달 받을 수 있다.
+        window.document.getElementById('child').addEventListener('click', (event)=> {
+            console.log('event', event);
+            alert("Button Clicked!");
+            event.stopPropagation(); // 버블링 중단.
+        });
+
+    </script>
+    
+</body>
+</html>

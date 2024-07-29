@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        
+        body {
+            margin: 16px;
+            display:  flex;
+            justify-content:  center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #f9f9f9;
+            margin: 8px 0;
+            padding:  10px;
+            border: 1px solid #ccc;
+            display:  flex ;
+            justify-content: space-between;
+            align-items:  center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div>
+        <h2>EventListener를 사용한 요소 추가, 삭제, 수정, 토글 만들기</h2>
+            <br><br>
+        <button id="addBtn">아이템 추가</button>
+        <button id="toggleBtn">리스트 토글</button>
+            <br><br>
+
+        <ul id="myList">
+            <li>
+                아이템1
+                <button class="editBtn">수정하기</button>
+                <button class="deleteBtn">삭제하기</button>
+             </li>
+        </ul>
+    </div>
+
+    <script>
+        let count = 1;
+        // * 아이템 추가 기능
+        // 1. 아이템 추가() 이벤트 리스너를 등록 하자.
+        // 2. li 요소를 동적으로 생성하자
+        // 3. UL 요소에 접근해서 자바스크립트 코드로 생성한 요소를 추가하자 
+        window.document.getElementById("addBtn").addEventListener('click', function() {
+            count ++;
+
+            let newItem = document.createElement("li");
+            newItem.innerHTML = ` 아이템 ${count} <button class="editBtn"> 수정하기</button>  <button class="deleteBtn">삭제하기</button> `;
+            
+            document.getElementById("myList").append(newItem);
+
+        });
+
+        // * 아이템 토글 기능을 만들어 보자.
+        document.getElementById("toggleBtn").addEventListener("click", function() {
+            let list = document.getElementById('myList'); 
+
+            list.style.display = list.style.display == 'none' ?  '' : 'none';
+        });
+
+    </script>
+    
+</body>
+</html>

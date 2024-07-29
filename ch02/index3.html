@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style-type:none;
+            padding: 0;
+        }
+
+        li {
+            background-color:  #f9f9f9;
+            margin: 8px 0;
+            padding: 0;
+        }
+
+    </style>
+</head>
+<body>
+        <h1>요소를 동적으로 추가하기</h1>
+        <button onclick="addItem()">새로운 아이템 추가</button>
+        <br>
+        <ul id="myList">
+            <li>새로운 아이템 추가 1</li>
+        </ul>
+
+        <script>
+            let count = 1;
+            function addItem() {
+            //    count++;
+             //   let newItem = window.createElement("li");
+                let newItem = document.createElement("li");
+                newItem.innerHTML = ` <div> 새로운 아이템 ${++count} </div> `
+                newItem.innerHTML = `<div> 새로운 아이템 ${++count} </div>`;
+            // newItem.textContent = `새로운 아이템 추가 ${count}`;
+            // newItem.textContent = "새로운 아이템 추가" + count++;
+
+                let ulList = window.document.querySelector("#myList");
+                ulList.append(newItem);
+
+            }
+        </script>
+
+
+</body>
+</html>

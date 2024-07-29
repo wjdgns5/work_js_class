@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .flex--container {
+            display: flex;
+        }
+
+        .box {
+            
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+    </style>
+  </head>
+  <body>
+    <h1>숨기기</h1>
+    <div class="flex--container">
+        <!-- Inline Event Handler 방식 사용 -->
+        <button onclick="hideDisplay()">display로 숨기기</button>
+        <button onclick="hideVisible()" >visible로 숨기기</button>
+
+        <div class="box">
+            <div class="box" id="innerBox1">내부박스1</div>
+            <div class="box" id="innerBox2">내부박스2</div>
+        </div>
+    </div>
+
+    <script>
+        function hideDisplay() {
+            let el = window.document.querySelector("#innerBox1");
+            el.style.display = 'none'; //  
+        }
+
+        function hideVisible() {
+            let el = document.querySelector("#innerBox2");
+            el.style.visibility = "hidden";
+        }
+
+        // display 속성과 visibility 속성에 차이는 뭘까? 
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+        <h2>index10.html 파일 입니다.</h2>
+
+        <h1 id = "title">Hello, World!</h1>
+        <h1 id = "title2">Hello, Korea!</h1>
+        <button id="changeButton">Change Text</button>
+        <button id="changeButton1">Change Text</button>
+
+        <script>
+            // 자바스크립트를 사용하여 DOM (문서 객체와 모델) 을 조작해 보자.
+
+            // button 요소 id 값인 changeButton 노드에 접근해 보기
+
+            let changeBtn = document.getElementById("changeButton");
+            console.log(typeof changeBtn); // 타입이 무엇인지 알 수 있다.
+            console.log(changeBtn);
+
+            // 함수 표현식 - 함수를 변수안에 저장하는 방법
+            let clickEvent = function() {
+
+                alert("2222222");
+                let titleElement = document.getElementById("title");
+                titleElement.textContent = "안녕, 스크립트야~"
+                titleElement.style.color = "blue";
+            };
+
+            // 이벤트 리스너를 등록해 보자.
+            changeBtn.addEventListener("click", clickEvent);
+
+
+            // 함수 표현식 - 2  (이런 방식도 있다.)
+            // changeBtn.addEventListener("click",  function(){ // 클릭 이벤트를 사용하겠다.
+            //     alert("11111");
+
+            // }); 
+
+            let changeBtn1 = document.getElementById("changeButton1");
+          
+            console.log(typeof changeBtn1);
+            console.log(changeBtn1);
+
+            changeBtn1.addEventListener("click", function() {
+                alert("title1 아이디를 사용하고 있습니다.");
+                let ti21 = document.getElementById("title2");
+                ti21.textContent = "구름"
+                ti21.style.color="green"
+            });
+
+        </script>
+    
+</body>
+</html>

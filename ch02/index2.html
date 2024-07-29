@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .flex--container {
+            display: flex;
+        }
+
+        .box {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        #innerBox1{
+            display: none;
+        }
+
+        #innerBox2{
+            visibility: hidden;
+        }
+
+    </style>
+  </head>
+  <body>
+    <h1>보이기</h1>
+    <div class="flex--container">
+        <!-- Inline Event Handler 방식 사용 -->
+        <button onclick="showDisplay()">display로 보이기</button>
+        <button onclick="showVisible()" >visible로 보이기</button>
+
+        <div class="box">
+            <div class="box" id="innerBox1">내부박스1</div>
+            <div class="box" id="innerBox2">내부박스2</div>
+        </div>
+    </div>
+
+    <script>
+        function showDisplay() {
+            let el = window.document.querySelector("#innerBox1");
+            // inline, block flex
+            el.style.display = 'block'; //  
+        }
+
+        function showVisible() {
+            let el = document.querySelector("#innerBox2");
+            el.style.visibility = "visible";
+        }
+
+        // display 속성과 visibility 속성에 차이는 뭘까? 
+
+    </script>
+
+  </body>
+</html>

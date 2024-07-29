@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h2>index1.html</h2>
+        <div>
+            <p><span>자바스크립트 형변환에 대해서 살펴 보자</span></p>
+        </div>
+
+        <script>
+
+            console.log(hNum);
+
+            const num = 5; // 변수 선언과 동시에 초기화 --> 타입 추론이 가능하다.
+            const str = "10"; // 쌍 따옴표, 홑 따옴표 둘다 인식한다. 
+
+            const result = num + str;
+            console.log(result); // 5 + "10" -> 덧셈 연산일 때 = 문자로 인식이 된다. 결과는 "510" 이다.
+
+            const num1 = 10;
+            const str1 = '2';
+            console.log("-----------------");
+
+            const multiplyResult = num1 * str1; // 곱셈 연산이라 문자열 타입을 숫자형으로 변환하여 곱셈
+            console.log(multiplyResult);
+            console.log("-----------------");
+
+            const divideResult = num1 / str1; // 나눗셈 연산이라 문자열 타입을 숫자형으로 변환하고 나눗셈
+            console.log(divideResult);
+            console.log("-----------------");
+
+            const moResult = num1 % str1; // 나머지 연산이라 문자열 타입을 숫자형으로 변환하여 나머지 연산 처리
+            console.log(moResult);
+
+
+            var hNum = 10; // 자바스크립트가 맨 위로 끌어올린다, ()
+            console.log(hNum);
+          
+
+        </script>
+</body>
+</html>

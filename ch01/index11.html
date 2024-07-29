@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h2>index11.html 파일 입니다.</h2>
+
+        <div id="myDiv">아이디로 접근</div>
+        <div class="myClass">정적 렌더링1</div>
+        <div class="myClass">정적 렌더링2</div>
+
+        <p>태그 이름으로 접근 1</p>
+        <p>태그 이름으로 접근 2</p>
+
+        <script>
+            // 1. 요소에 id 값을 접근하기
+            let byMyDiv = document.getElementById("myDiv");
+            console.log(byMyDiv.textContent);
+
+            // 2. 요소의 class 속성을 사용해서 접근하기
+            let byClassNameElements = document.getElementsByClassName("myClass");
+            console.log(typeof byClassNameElements);
+            // 클래스를 여러개 사용을 인덱스 번호로 사용할 수 있다.
+            byClassNameElements[0].textContent = "동적 렌더링1";
+            byClassNameElements[1].textContent = "동적 렌더링2";
+
+            // 3. 요소 태그 이름으로 접근해 보기
+            let byTagName = document.getElementsByTagName("p");
+           console.log(byTagName[1].textContent);
+
+            // 4. querySelect 사용해 보기
+            // 제공된 CSS 선택자와 일치하는 문서 내의 첫번째 엘리먼트를 반환 합니다. !!
+            // 만약 일치하는 엘리먼트가 없다면 NULL 값을 반환 합니다.
+            let byQuerySelect = document.querySelector("#myClass");
+            let byQuerySelect1 = document.querySelector(".myClass"); // 클래스 접근
+            console.log("----------------------------");
+            console.log(byQuerySelect);
+            console.log(byQuerySelect1); // 맨 위에있는 클래스 1개 
+
+            // 5. querySelectorAll 사용해 보기
+            // CSS 선택자와 일치하는 모든 엘리먼트를 NodeList로 반환 합니다.
+            let byQuerySelectAll = document.querySelectorAll(".myClass");  // 클래스 접근
+            console.log("================");
+            console.log(typeof byQuerySelectAll);
+            console.log(byQuerySelectAll);
+
+           byQuerySelectAll[1].textContent = "안녕 QuerySelectAll";
+           byQuerySelectAll[1].style.color = "blue"; // 색 변경
+
+        </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index9.html  버블링 </title>
+</head>
+<body>
+<!--  ul>li*3>button*3 -->   
+
+<!-- 이벤트 위임에 대한 개념을 배우기 전 코드 활용 -->
+<ul id="myList">
+    <li><button>버튼 1</button></li>
+    <li><button>버튼 2</button></li>
+    <li><button>버튼 3</button></li>
+</ul>
+    
+<script>
+    // 각 버튼에 개별적으로 이벤트 리스너를 추가해보자. 단 반복문 활용
+    let btns = window.document.querySelectorAll("#myList button");
+    console.log("btns", btns);
+    // btns.forEach(function(b) {
+    //     // alert('1');
+    //     console.log('b', b);
+    // });
+
+    // 화살표 함수 
+    btns.forEach((button)=> {
+        // alert('1');
+      //  console.log('b', button);
+      button.addEventListener('click', function() {
+        alert('버튼 클릭 확인');
+      });
+
+    });
+
+</script>
+
+</body>
+</html>

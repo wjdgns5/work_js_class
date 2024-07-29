@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 이벤트 위임에대한 개념을 배우기 전 코드 활용 -->
+    <ul id="myList">
+        <li><button>버튼 1</button></li>
+        <li><button>버튼 2</button></li>
+        <li><button>버튼 3</button></li>
+    </ul>
+
+    <script>
+        document.getElementById("myList").addEventListener('click', function(event){
+            console.log(event.target); // console에 찍힌다.
+            // 해당하는 target에 textContext를 가지고 오고 싶다면
+            console.log(event.target.textContent); // html 콘솔에 찍힌다.
+
+            // 연습문제 1
+            // 어떤 버튼이 눌러 졌는지 alert()을 띄어 주세요.
+             // alert(event.target.textContent);
+
+            // 연습문제 2
+            // 해당하는 버튼에 컨텐츠를 영어로 수정하시오.
+             // event.target.textContent = 'button';
+            
+            //연습문제 3
+            // 버튼 2 라는 글자를 가진 버튼만 글자를 수정하시오.
+             alert(event.target.textContent == '버튼 2'  ? 'ㄱㅁㅇ' : event.target.textContent);
+
+
+        });
+     
+    </script>
+</body>
+</html>
