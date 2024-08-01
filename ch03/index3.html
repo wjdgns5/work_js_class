@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+    }
+
+    .like-heart{
+        font-size: 40px;
+        color: gray;
+        cursor: pointer;
+        transition: color 1s ease, transform 1s ease;
+    }
+
+    .like-heart.liked{
+        font-size: 60px;
+        color: red;
+        /* css 애니메이션 효과 */
+
+        transform: scale(1.5); 
+    }
+
+</style>
+
+</head>
+<body>
+    <!-- &#10084; -> 심볼즈   -->
+    <span class="like-heart" onclick="likeToggle(this)">&#9825;</span>
+    <span class="like-heart" onclick="likeToggle(this)">&#9825;</span>
+    <span class="like-heart" onclick="likeToggle(this)">&#9825;</span>
+    <br>
+
+    <script>
+        function likeToggle(el){
+            el.classList.toggle("liked");
+       
+        }
+
+        // 확인
+        // let elements = window.document.getElementById("example");
+        // console.log(elements);
+
+        // console.log(typeof elements);
+
+        // Node, NodeList, HTMLCollection
+
+    </script>
+    
+</body>
+</html>
